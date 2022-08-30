@@ -11,10 +11,13 @@ import './index.css'
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import {UserProvider} from "./context/userContext";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<UserProvider>
+		<ToastContainer/>
 		<BrowserRouter>
 			<Routes>
 				<Route path="/login" element={<Login/>}/>

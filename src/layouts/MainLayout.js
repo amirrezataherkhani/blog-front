@@ -3,6 +3,8 @@ import {Link, Outlet, useLocation, useNavigate} from "react-router-dom";
 import logo from '../images/developer.png';
 import UserContext from "../context/userContext";
 import http from "../http";
+import AuthenticatedDropdown from "../components/AuthenticatedDropdown";
+
 
 function MainLayout(props) {
 	const location = useLocation()
@@ -32,13 +34,7 @@ function MainLayout(props) {
 							Login
 						</Link>
 					</div> :
-					<div className={'col-span-1 '}>
-						<button className={'bg-[#52ab98] text-white p-2 rounded-md h-fit'}
-								onClick={e => handleLogout(e)}>
-							Logout
-						</button>
-					</div>
-
+					<AuthenticatedDropdown handleLogout={handleLogout}/>
 				}
 			</nav>
 			<Outlet/>
