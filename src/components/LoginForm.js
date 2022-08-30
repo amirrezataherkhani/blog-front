@@ -10,7 +10,8 @@ function LoginForm({setPassword, setUsername, handleLogin}) {
 				<label htmlFor="password">Password</label>
 				<input type="password" className={'border '} onChange={e => setPassword(e.target.value)} name="password"
 					   id=""/>
-				<input type="submit" name="" id="" value='Login'/>
+				<input type="submit" className={'text-lg text-white bg-[#52ab98] py-1 rounded mt-3'} name="" id="" value='Login'></input>
+
 			</form>
 		</div>
 	)
